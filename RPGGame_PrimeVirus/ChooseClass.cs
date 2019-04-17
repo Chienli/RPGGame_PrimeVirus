@@ -17,33 +17,12 @@ namespace RPGGame_PrimeVirus
             string[] job = { "Novice", "Warrior", "Priest" };
             switch (input)
             {
-                case "Novice": break;
-                case "Warrior": break;
-                case "Priest": break;
-            }
-        }
-
-        public class Novice : Player
-        {
-            public void Skill()
-            {
-                //Power += 10;
-            }
-        }
-
-        public class Priest : Player
-        {
-            public void Skill()
-            {
-                //Power += 10;
-            }
-        }
-
-        public class Warrior : Player
-        {
-            public void Skill()
-            {
-                //Power += 10;
+                case "Novice":
+                    player = new Novice(); break;
+                case "Warrior":
+                    player = new Warrior(); break;
+                case "Priest":
+                    player = new Priest(); break;
             }
         }
     }

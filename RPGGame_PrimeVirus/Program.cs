@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace RPGGame_PrimeVirus
 {
-	class Program
+	internal class Program
 	{
-		static void Main(string[] args)
+		private static ChooseClass chooseClass = new ChooseClass();
+
+		private static void Main(string[] args)
 		{
+			Console.WriteLine("Hello Hero , Welcome to SHIN INTERN MUSOU");
+			var player = new Player();
+			Console.WriteLine("Please enter your Name:");
+			player.Name = Console.ReadLine();
+			chooseClass.chooseClass(player);
+			Console.WriteLine($"hi {player.Name} , {player.Job} ");
+			Console.ReadLine();
 		}
 	}
 }

@@ -1,10 +1,12 @@
 ﻿namespace RPGGame_PrimeVirus
 {
-    public class Warrior : Player
-    {
-        public void Skill()
-        {
-            //Power += 10;
-        }
-    }
+	public class Warrior : Player
+	{
+		public string Job => "Warrior";
+
+		public void Skill()
+		{
+			//Power += 10;
+		}
+	}
 }

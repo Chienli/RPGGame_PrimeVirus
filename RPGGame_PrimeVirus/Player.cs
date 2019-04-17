@@ -11,14 +11,21 @@ namespace RPGGame_PrimeVirus
 		public Player()
 		{
 			Console.WriteLine("Please enter your Name:");
+			Name = Console.ReadLine();
 		}
 
 		public int Hp
 		{
-			get { return 100; }
-			set { Hp = value; }
+			get => 100;
+			set => Hp = value;
 		}
 
 		public string Name { get; set; }
+
+		public int Power
+		{
+			get => 20;
+			set => Power = value;
+		}
 	}
 }

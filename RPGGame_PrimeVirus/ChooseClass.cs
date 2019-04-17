@@ -4,12 +4,13 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Win32;
 
 namespace RPGGame_PrimeVirus
 {
     internal class ChooseClass
     {
-        public void chooseClass(int x)
+        public void chooseClass(Player player)
         {
             Console.WriteLine("type[Novice],[Warrior] or [Priest] to create your character");
             var input = Console.ReadLine();
@@ -19,6 +20,30 @@ namespace RPGGame_PrimeVirus
                 case "Novice": break;
                 case "Warrior": break;
                 case "Priest": break;
+            }
+        }
+
+        public class Novice : Player
+        {
+            public void Skill()
+            {
+                //Power += 10;
+            }
+        }
+
+        public class Priest : Player
+        {
+            public void Skill()
+            {
+                //Power += 10;
+            }
+        }
+
+        public class Warrior : Player
+        {
+            public void Skill()
+            {
+                //Power += 10;
             }
         }
     }

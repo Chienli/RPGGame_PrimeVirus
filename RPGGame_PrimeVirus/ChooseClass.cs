@@ -14,7 +14,6 @@ namespace RPGGame_PrimeVirus
         {
             Console.WriteLine("type[Novice],[Warrior] or [Priest] to create your character");
             var input = Console.ReadLine();
-            string[] job = { "Novice", "Warrior", "Priest" };
             switch (input)
             {
                 case "Novice":
@@ -23,6 +22,9 @@ namespace RPGGame_PrimeVirus
                     player = new Warrior(); break;
                 case "Priest":
                     player = new Priest(); break;
+                default:
+                    chooseClass(player);
+                    break;
             }
         }
     }

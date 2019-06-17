@@ -10,21 +10,31 @@ namespace RPGGame_PrimeVirus
 {
     internal class ChooseClass
     {
-        public void chooseClass(Player player)
+        public Player chooseClass()
         {
-            Console.WriteLine("type[Novice],[Warrior] or [Priest] to create your character");
-            var input = Console.ReadLine();
-            switch (input)
+            while (true)
             {
-                case "Novice":
-                    player = new Novice(); break;
-                case "Warrior":
-                    player = new Warrior(); break;
-                case "Priest":
-                    player = new Priest(); break;
-                default:
-                    chooseClass(player);
-                    break;
+                Console.WriteLine("type[Novice],[Warrior] or [Priest] to create your character");
+                var input = Console.ReadLine();
+                switch (input)
+                {
+                    case "Novice":
+                        return new Novice();
+                    //break;
+
+                    case "Warrior":
+                        return new Warrior();
+                    //break;
+
+                    case "Priest":
+                        return new Priest();
+                    //break;
+
+                    default:
+                        continue;
+                }
+
+                break;
             }
         }
     }

@@ -6,26 +6,31 @@ using System.Threading.Tasks;
 
 namespace RPGGame_PrimeVirus
 {
-	public class Player
-	{
-		public int Hp
-		{
-			get => 100;
-			set => Hp = value;
-		}
+    public class Player
+    {
+        private Random rnd = new Random();
+        public virtual int Hp { get; set; }
 
-		public string Job
-		{
-			get => "GOBLIN";
-			set => Job = value;
-		}
+        public virtual string Job { get; set; }
 
-		public string Name { get; set; }
+        public virtual int MaxHp { get; set; }
 
-		public int Power
-		{
-			get => 20;
-			set => Power = value;
-		}
-	}
+        public string Name { get; set; }
+
+        public virtual int Power { get; set; }
+
+        public virtual void Attack(Player PPL)
+        {
+            PPL.Hp -= Power;
+        }
+
+        public virtual bool Run()
+        {
+            return !(rnd.Next(1, 11) <= 5); ;
+        }
+
+        public virtual void Skill(Player PPL)
+        {
+        }
+    }
 }
